@@ -10,6 +10,9 @@ platforms:
 
 suites:
   - name: default
+    driver_config:
+      network:
+        - ["private_network", {ip: "33.33.33.10"}]
     run_list:
       - recipe[chef-graphite::default]
     attributes:
