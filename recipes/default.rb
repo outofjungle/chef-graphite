@@ -7,4 +7,5 @@
 # All rights reserved - Do Not Redistribute
 #
 
-require_recipe "graphite::default"
+include_recipe 'yum-epel'
+require_recipe 'graphite::default'
