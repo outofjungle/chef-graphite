@@ -8,4 +8,9 @@
 #
 
 include_recipe 'yum-epel'
+
+%w(gcc gcc-c++ autoconf automake).each do |pkg|
+  package "#{pkg}"
+end
+
 require_recipe 'graphite::default'
